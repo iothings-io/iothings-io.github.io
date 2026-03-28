@@ -72,6 +72,22 @@ Bapak bisa mempercantik tampilan dashboard Home Assistant dengan menambahkan kar
 ---
 [Kembali ke Halaman Utama](../)
 
+```cpp
+void setup() {
+  // Inisialisasi LED internal ESP32 (GPIO 2)
+  pinMode(2, OUTPUT);
+  Serial.begin(115200);
+  Serial.println("iothings.io - Gateway Ready!");
+}
+
+void loop() {
+  // LED Berkedip (Blink)
+  digitalWrite(2, HIGH);   
+  delay(1000);              
+  digitalWrite(2, LOW);    
+  delay(1000);              
+}
+
 ```yaml
 type: entities
 entities:
