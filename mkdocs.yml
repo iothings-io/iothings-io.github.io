@@ -1,33 +1,54 @@
-site_name: iothings.io Documentation
+ site_name: iothings.io Documentation
 site_url: https://iothings-io.github.io/
+
 theme:
-  name: material  # Ini tema paling populer dan profesional untuk dokumentasi
+  name: material
+  language: id
   features:
-    - navigation.tabs      # Menu di bar atas
-    - navigation.path      # INI UNTUK MENGAKTIFKAN BREADCRUMBS
-    - navigation.top       # Kembali ke atas (Back to top)
-    - navigation.sections  # Agar sidebar punya sekat rapi
-    - search.suggest
-  font:
-    text: Roboto          # Font utama (Sangat bersih dan tajam)
-    code: Roboto Mono     # Font untuk koding/perintah terminal
+    - navigation.tabs      # Menu di bagian atas (Header)
+    - navigation.sections  # Sidebar dengan sekat yang rapi
+    - navigation.top       # Tombol kembali ke atas (Back to Top)
+    - navigation.path      # Breadcrumbs (Home > Produk > Nama Produk)
+    - search.suggest       # Saran pencarian otomatis
+    - search.highlight     # Menandai kata yang dicari di dalam teks
+    - content.code.copy    # Menambahkan tombol COPY otomatis di setiap kotak kode
   palette:
-    primary: indigo       # Warna bar atas
-    accent: indigo        # Warna link/tombol
-nav:
-  - Beranda: index.md
-  - Produk & Panduan:
-      - Zigbee Gateway: gateway.md
-      - RS485 Bridge: rs485.md
-  - Marketplace: catalog.md
+    # Pengaturan Mode Terang
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Mode Gelap
+    # Pengaturan Mode Gelap
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Mode Terang
+  font:
+    text: Roboto           # Font utama yang tajam untuk teks
+    code: Roboto Mono      # Font khusus untuk kodingan agar rapi
 
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
       pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
   - pymdownx.superfences:
       custom_fences:
-        - name: mermaid
+        - name: mermaid    # Fitur untuk membuat diagram alur (Flowchart)
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
+
+nav:
+  - Beranda: index.md
+  - Panduan Produk:
+      - Zigbee Gateway: gateway.md
+      - RS485 Bridge: rs485.md
+  - Marketplace: catalog.md
