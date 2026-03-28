@@ -33,6 +33,7 @@ theme:
   font:
     text: Roboto           # Font utama yang tajam untuk teks
     code: Roboto Mono      # Font khusus untuk kodingan agar rapi
+  custom_dir: overrides  # Ini yang menghubungkan ke file main.html
   generator: false
 
 markdown_extensions:
