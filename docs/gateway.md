@@ -69,7 +69,7 @@ Jangan biarkan perangkat "End-Device" (seperti sensor baterai) berada terlalu ja
 ## 6. Integrasi Visual dengan Home Assistant
 Bapak bisa mempercantik tampilan dashboard Home Assistant dengan menambahkan kartu status:
 
-```yaml
+'''yaml
 type: entities
 entities:
   - entity: sensor.zigbee_gateway_status
