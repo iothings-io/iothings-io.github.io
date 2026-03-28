@@ -2,10 +2,12 @@ site_name: iothings.io Documentation
 site_url: https://iothings-io.github.io/
 theme:
   name: material  # Ini tema paling populer dan profesional untuk dokumentasi
+  font:
+    text: Roboto          # Font utama (Sangat bersih dan tajam)
+    code: Roboto Mono     # Font untuk koding/perintah terminal
   palette:
-    primary: indigo
-    accent: indigo
-
+    primary: indigo       # Warna bar atas
+    accent: indigo        # Warna link/tombol
 nav:
   - Beranda: index.md
   - Produk & Panduan:
