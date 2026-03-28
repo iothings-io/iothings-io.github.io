@@ -5,6 +5,7 @@ theme:
   features:
     - navigation.tabs      # Menu di bar atas
     - navigation.path      # INI UNTUK MENGAKTIFKAN BREADCRUMBS
+    - navigation.top       # Kembali ke atas (Back to top)
     - navigation.sections  # Agar sidebar punya sekat rapi
     - search.suggest
   font:
