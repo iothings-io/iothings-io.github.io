@@ -18,4 +18,4 @@ Selamat datang di panduan teknis **Zigbee Gateway Pro** dari iothings.io. Perang
 3.  **Integration:** Masukkan alamat IP Gateway ke konfigurasi Zigbee2MQTT di Home Assistant.
 
 ---
-[Kembali ke Halaman Utama](../index.md)
+[Kembali ke Halaman Utama](../)
