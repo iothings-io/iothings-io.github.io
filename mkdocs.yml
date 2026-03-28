@@ -1,5 +1,6 @@
 site_name: iothings.io Documentation
 site_url: https://iothings-io.github.io/
+copyright: iothings.io&copy;
 
 theme:
   name: material
@@ -32,6 +33,7 @@ theme:
   font:
     text: Roboto           # Font utama yang tajam untuk teks
     code: Roboto Mono      # Font khusus untuk kodingan agar rapi
+  generator: false
 
 markdown_extensions:
   - pymdownx.highlight:
