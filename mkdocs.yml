@@ -2,6 +2,11 @@ site_name: iothings.io Documentation
 site_url: https://iothings-io.github.io/
 theme:
   name: material  # Ini tema paling populer dan profesional untuk dokumentasi
+  features:
+    - navigation.tabs      # Menu di bar atas
+    - navigation.path      # INI UNTUK MENGAKTIFKAN BREADCRUMBS
+    - navigation.sections  # Agar sidebar punya sekat rapi
+    - search.suggest
   font:
     text: Roboto          # Font utama (Sangat bersih dan tajam)
     code: Roboto Mono     # Font untuk koding/perintah terminal
