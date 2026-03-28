@@ -28,4 +28,4 @@ Selain produk jadi, kami juga melayani:
 * **B2B:** Tersedia untuk pemesanan jumlah besar (Bulk Order).
 
 ---
-[Kembali ke Halaman Utama](../index.md)
+[Kembali ke Halaman Utama](../)
