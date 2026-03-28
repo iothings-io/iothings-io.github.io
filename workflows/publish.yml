@@ -1,17 +1,41 @@
-name: ci 
+name: publish 
 on:
   push:
     branches:
-      - master  # Sesuaikan jika branch utama Bapak bernama 'main'
+      - master 
+      - main
 permissions:
   contents: write
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    # Memaksa penggunaan Node.js 24 untuk menghindari peringatan depresi Node.js 20
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
         with:
           python-version: 3.x
-      - run: pip install mkdocs-material 
-      - run: mkdocs gh-deploy --force
+
+      - name: Configure cache
+        run: echo "cache_id=$(date --utc +%V)" >> $GITHUB_ENV 
+
+      - name: Cache dependencies
+        uses: actions/cache@v4
+        with:
+          key: mkdocs-material-${{ env.cache_id }}
+          path: .cache
+          restore-keys: |
+            mkdocs-material-
+
+      - name: Install dependencies
+        run: |
+          pip install mkdocs-material 
+          pip install pymdown-extensions
+
+      - name: Deploy to GitHub Pages
+        run: mkdocs gh-deploy --force
