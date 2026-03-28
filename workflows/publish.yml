@@ -9,19 +9,19 @@ permissions:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    # Memaksa penggunaan Node.js 24 untuk mematuhi standar baru GitHub 2026
     env:
+      # Mencoba memaksa penggunaan Node.js 24 sesuai saran log GitHub
       FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0 # Mengambil seluruh riwayat agar deploy lebih stabil
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.12' # Menggunakan versi spesifik yang lebih stabil
+          python-version: '3.12'
 
       - name: Install dependencies
         run: |
@@ -29,9 +29,12 @@ jobs:
           pip install mkdocs-material
           pip install pymdown-extensions
 
+      - name: Verify MkDocs Build
+        # Langkah ini untuk memastikan mkdocs.yml tidak ada error penulisan
+        run: mkdocs build
+
       - name: Deploy to GitHub Pages
         run: |
-          # Menambahkan konfigurasi git agar robot bisa melakukan commit ke gh-pages
           git config user.name github-actions[bot]
           git config user.email github-actions[bot]@users.noreply.github.com
           mkdocs gh-deploy --force
