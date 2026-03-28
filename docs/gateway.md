@@ -73,6 +73,7 @@ Bapak bisa mempercantik tampilan dashboard Home Assistant dengan menambahkan kar
 [Kembali ke Halaman Utama](../)
 
 ```cpp
+
 void setup() {
   // Inisialisasi LED internal ESP32 (GPIO 2)
   pinMode(2, OUTPUT);
@@ -87,6 +88,7 @@ void loop() {
   digitalWrite(2, LOW);    
   delay(1000);              
 }
+```
 
 ```yaml
 type: entities
@@ -95,5 +97,5 @@ entities:
   - entity: sensor.zigbee_gateway_uptime
   - entity: button.zigbee_gateway_restart
 title: iothings Gateway Monitor
-
+```
 
