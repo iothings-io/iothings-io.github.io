@@ -1,3 +1,7 @@
+!!! warning "🚧 Halaman Percobaan"
+    Halaman ini masih dalam tahap **eksperimen**. Konten dapat berubah sewaktu-waktu.
+---
+
 # 🌐 iothings.io - Industrial IoT Solutions
 
 Selamat datang di pusat dokumentasi dan informasi **iothings.io**. Kami berfokus pada perancangan hardware, firmware, dan solusi konektivitas pintar.
