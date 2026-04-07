@@ -21,7 +21,7 @@ Kami menyediakan berbagai modul hardware untuk kebutuhan industri dan otomasi:
 ### 📂 Dokumentasi Teknis
 *Klik tautan di bawah ini untuk mempelajari cara penggunaan modul kami (Segera Hadir):*
 
-1.  [Panduan Setup Zigbee Gateway](docs/gateway)
+1.  [Panduan Setup Zigbee Gateway](/gateway.md)
 2.  [Integrasi Modbus RS485 ke Home Assistant](docs/rs485.md)
 3.  [Katalog Komponen iothings.io](docs/catalog.md)
 
